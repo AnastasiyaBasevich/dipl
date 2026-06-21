@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <div class="login-page">
+    <div class="card login-card stack">
+      <h1 style="margin: 0;">Verification</h1>
+      <p style="margin: 0; color: var(--muted); font-size: 13px;">
+        Demo mode: any login and password are accepted.
+      </p>
+      <form id="verifyForm" class="stack">
+        <div class="field">
+          <label for="login">Login</label>
+          <input type="text" id="login" name="login" placeholder="e.g. freshmart" autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="any value" autocomplete="current-password">
+        </div>
+        <div class="field">
+          <label for="role">Role</label>
+          <select id="role" name="role">
+            <option value="client">Client</option>
+            <option value="manager">Manager</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Continue</button>
+      </form>
+    </div>
+  </div>
+  <script src="static/js/verify.js?v=2"></script>
+</body>
+</html>
