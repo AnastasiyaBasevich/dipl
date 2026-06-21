@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Order</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <div class="nav__brand">Vittaim Order System</div>
+    <div class="nav__links" id="navLinks"></div>
+  </nav>
+
+  <main class="page-container">
+    <div class="layout-two-cols">
+      <section class="products-section stack">
+        <div>
+          <h2>Frequently ordered</h2>
+          <div id="frequentList" class="products-list"></div>
+        </div>
+        <div>
+          <h2>Product catalog</h2>
+          <div id="productList" class="products-list"></div>
+        </div>
+      </section>
+
+      <section class="cart-section stack">
+        <h2>Cart summary</h2>
+        <div id="orderMessage" style="display: none;"></div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="space-between"><strong>Total</strong><strong id="cartTotal">0.00 BYN</strong></div>
+
+        <form id="orderForm" class="stack">
+          <div class="field">
+            <label for="deliveryDate">Delivery date</label>
+            <input id="deliveryDate" name="deliveryDate" type="date" required>
+          </div>
+          <div class="field">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" maxlength="500"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit Order</button>
+          <button id="clearBtn" class="btn btn-text" type="button">Clear</button>
+        </form>
+      </section>
+    </div>
+
+    <div id="deficitModal" class="modal-overlay" aria-hidden="true">
+      <div class="modal stack">
+        <h3 style="margin: 0;">Some items are unavailable</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Requested</th>
+                <th>Available</th>
+                <th>Alternative</th>
+              </tr>
+            </thead>
+            <tbody id="deficitBody"></tbody>
+          </table>
+        </div>
+        <div class="row">
+          <button id="resubmitBtn" class="btn btn-primary" type="button">Update order and resubmit</button>
+          <button id="cancelDeficitBtn" class="btn btn-secondary" type="button">Cancel order</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="static/js/mock-data.js"></script>
+  <script src="static/js/api.js"></script>
+  <script src="static/js/layout.js"></script>
+  <script src="static/js/order_form.js"></script>
+</body>
+</html>
