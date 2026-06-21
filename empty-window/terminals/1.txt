@@ -1,0 +1,6 @@
+---
+pid: 32344
+cwd: |
+  C:\Users\Asus
+---
+PS C:\Users\Asus>
