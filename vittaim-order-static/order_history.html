@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <div class="nav__brand">Vittaim Order System</div>
+    <div class="nav__links" id="navLinks"></div>
+  </nav>
+
+  <main class="page-container">
+    <h1>My Orders</h1>
+    <div class="table-wrap">
+      <table id="ordersTable">
+        <thead>
+          <tr>
+            <th>Order #</th>
+            <th>Date placed</th>
+            <th>Delivery date</th>
+            <th>Status</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="ordersBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="static/js/mock-data.js"></script>
+  <script src="static/js/api.js"></script>
+  <script src="static/js/layout.js"></script>
+  <script src="static/js/order_history.js"></script>
+</body>
+</html>

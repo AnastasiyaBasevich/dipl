@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Dashboard</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <div class="nav__brand">Vittaim Order System</div>
+    <div class="nav__links" id="navLinks"></div>
+  </nav>
+
+  <main class="page-container">
+    <h1>All Orders</h1>
+
+    <div class="filters">
+      <div>
+        <label for="statusFilter">Status</label>
+        <select id="statusFilter">
+          <option value="all">All</option>
+          <option value="accepted">accepted</option>
+          <option value="confirmed">confirmed</option>
+          <option value="deficit">deficit</option>
+          <option value="dispatched">dispatched</option>
+        </select>
+      </div>
+      <div>
+        <label for="fromDate">From date</label>
+        <input id="fromDate" type="date">
+      </div>
+      <div>
+        <label for="toDate">To date</label>
+        <input id="toDate" type="date">
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Order #</th>
+            <th>Client</th>
+            <th>Date placed</th>
+            <th>Delivery date</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="managerOrdersBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="static/js/mock-data.js"></script>
+  <script src="static/js/api.js"></script>
+  <script src="static/js/layout.js"></script>
+  <script src="static/js/manager.js"></script>
+</body>
+</html>
